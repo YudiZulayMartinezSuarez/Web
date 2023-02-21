@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    height: 100px;
+    background-color: pink;
+    padding: 0 50px ;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    text-transform: capitalize;
+    color: black;
+    font-weight: 200;
+}
+
+.menu a{
+    color: black;
+    text-transform:capitalize;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0,4s;
+    
+}
+
+.mostrar-menu, .esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0,4s;
+    
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+.menu a:hover, .mostrar-menu:hover, .esconder-menu:hover {
+        color: palevioletred;
+}
+
+#check{
+    display: none;
+}
+
+
+
+#contenido-baner{
+    float: right;
+    
+}
+
+
+.divizq{
+    float: left;
+    margin-left: 10%;
+    margin-top: 5%;
+
+}
+
+.divder{
+    float: right;
+    margin-right: 5%;
+    margin-top: 10%;
+
+}
+
+.divizq1{
+    float: left;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+.divder1{
+    float: right;
+    margin-right: 40%;
+    margin-top: 7%;
+}
+
+footer{
+    height: 20%;
+    margin-top: 40%;
+   
+  
+}
+
+.divizq2{
+    float:left;
+    margin-left: 20%;
+}
+
+.divder2{
+    float: right;
+    margin-right: 20%;
+}
+
+
+
+
+/*responsive*/
+@media(max-width:768px){
+    .mostrar-menu, .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: pink;
+        left: 0;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding:100px 0px ;
+        z-index: 100%;
+        transition: 0,8s;
+        
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    
+    }
+
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+
+    }
+}
